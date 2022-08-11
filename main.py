@@ -1,5 +1,5 @@
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 
 def word_overlap(w1, w2):
@@ -43,6 +43,7 @@ def find_optimal(word_list):
 
         for k in distribution:
             expectation[i] += distribution[k]**2 / n ## n(k) * p(k) = n(k)**2 / n_total
+
 
     idx = np.argmin(expectation)
     return word_list[idx]
